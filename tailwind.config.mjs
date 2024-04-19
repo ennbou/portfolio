@@ -7,6 +7,7 @@ export default {
 		extend: {},
 		fontFamily: {
 			merienda: ['Merienda Variable', ...defaultTheme.fontFamily.sans],
+			roboto: ['Roboto', ...defaultTheme.fontFamily.sans],
 		}
 	},
 	plugins: [],

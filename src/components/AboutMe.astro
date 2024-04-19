@@ -1,10 +1,38 @@
+---
+import Card from "@components/Card.astro";
+
+const conception = {
+  name: "Conception",
+  body: [
+    "I'm participating in the conceptualization phase of iOS application development. This involves engaging in brainstorming sessions to generate innovative ideas and solutions. I contribute to the conception of new features, offering insights into user experience design and functionality.",
+    "I collaborate with cross-functional teams in co-conceiving solutions, breaking down tasks into sub-tasks, and providing accurate estimations for the effort required",
+  ],
+};
+
+const development = {
+  name: "Development",
+  body: ["I'm transforming conceptualized ideas into tangible and functional iOS applications. I am proficient in utilizing Swift and other relevant technologies to write clean, efficient, and maintainable code. My development approach emphasizes adherence to industry best practices, coding standards, and design patterns.","I am dedicated to delivering high-quality software by conducting thorough testing, debugging, and code reviews. Additionally, I stay abreast of the latest iOS development trends and continuously seek opportunities to enhance application performance and user experience"]
+}
+
+const cicd = {
+  name: "CI/CD",
+  body: ["I setting up and optimizing Continuous Integration (CI) and Continuous Delivery (CD) processes for iOS application development. I leverage industry-standard CI/CD tools to automate the build, test, and deployment pipelines, ensuring a streamlined and efficient development workflow. This includes implementing automated testing strategies to catch bugs early in the development cycle, improving code quality, and expediting the release process."]
+}
+---
+
 <div class="bg-purple-600 text-white pt-80 pb-40">
   <div class="text-center w-7/12 mx-auto">
-  <div class="text-5xl font-bold p-4">
-    Hello, My name is Bouchaib
+    <div class="text-5xl font-bold p-4">Hello, My name is Bouchaib</div>
+    <p class="justify-center text-xl">
+      iOS App Developer, I have cultivated a diverse skill set across various platforms, including Web and Android.
+      However, my passion lies in iOS development, and I currently hold the position of iOS Developer. In this role, I
+      focus on adding new features, enhancing the app, and resolving issues to continually elevate the user experience.
+    </p>
   </div>
-  <p class="justify-center text-xl">
-    iOS App Developer, I have cultivated a diverse skill set across various platforms, including Web and Android. However, my passion lies in iOS development, and I currently hold the position of iOS Developer. In this role, I focus on adding new features, enhancing the app, and resolving issues to continually elevate the user experience.
-  </p>
-  </div>
+</div>
+
+<div class="flex flex-col lg:flex-row w-9/12 mx-auto bg-slate-50 p-10 -mt-20 rounded-md drop-shadow-xl mb-20">
+  <div class="basis-1/3 lg:border-r-2 border-gray-100 pr-4 mr-4"><Card title={conception.name} body={conception.body} /></div>
+  <div class="basis-1/3 lg:border-r-2 border-gray-100 pr-4 mr-4"><Card title={development.name} body={development.body} /></div>
+  <div class="basis-1/3"><Card title={cicd.name} body={cicd.body} /></div>
 </div>
