@@ -1,53 +1,153 @@
 ---
-import '@fontsource-variable/merienda';
-import '@fontsource/roboto';
+import "@fontsource-variable/merienda";
+import "@fontsource/roboto";
 
-import Layout from '@layouts/Layout.astro';
-import Header from '@components/Header.astro';
-import AboutMe from '@components/AboutMe.astro';
-import Company from '@components/Company.astro';
-import type {Props as CompanyType} from '@components/Company.astro';
+import Layout from "@layouts/Layout.astro";
+import Header from "@components/Header.astro";
+import AboutMe from "@components/AboutMe.astro";
+import Company from "@components/Company.astro";
+import type { Props as CompanyType } from "@components/Company.astro";
+import Project from "@components/Project.astro";
+import type { Props as ProjectType } from "@components/Project.astro";
+import SectionTitle from "@components/SectionTitle.astro";
 
-const companies: CompanyType[]= [
-  {company:{
-    name: "Alpha Network",
-    profileHeadline: "iOS Developer",
-    startDate: new Date(2023,6,12),
-    endDate: undefined,
-    contractType: "CDI",
-    location: "Morocco",
-    locationType: "Hybrid",
-    employmentType: "full-time",
-    description:
-      "As a member of a mobile development team, I contribute to developing an iOS and Android online streaming applications (live/VOD) for diverse clients spanning various countries. We are working with the Agile methodologies and using Jira for managing sprints and issue tickets efficiently.",
-			technologies: ["iOS", "UIKit", "Objective-C", "SwiftUI", "Ruby","XCFramework", "CI/CD", "Gitlab", "Jira", "Confluence", "Google Repo"]
-  }},
-  {company:{
-    name: "SQLI",
-    profileHeadline: "Mobile App Developer",
-    startDate: new Date(2022,2,15),
-    endDate: new Date(2023,6,11),
-    contractType: "CDI",
-    location: "Morocco",
-    locationType: "Hybrid",
-    employmentType: "full-time",
-    description:
-      "I collaborated with a team to develop a new e-commerce app for iOS and Android using Agile Scrum methodology. Through iterative development and constant communication, we ensured a seamless user experience. Our approach facilitated rapid adaptation to evolving requirements, delivering a robust, market-ready solution.",
-		technologies: ["iOS", "Android", "React Native", "CI/CD", "Rest API", "Jira", "Confluence", "Gitlab", "Fastlane", "Postman"]
-  }},
+const companies: CompanyType[] = [
+  {
+    company: {
+      name: "Alpha Network",
+      profileHeadline: "iOS Developer",
+      startDate: new Date(2023, 6, 12),
+      endDate: undefined,
+      contractType: "CDI",
+      location: "Morocco",
+      locationType: "Hybrid",
+      employmentType: "full-time",
+      description:
+        "As a member of a mobile development team, I contribute to developing an iOS and Android online streaming applications (live/VOD) for diverse clients spanning various countries. We are working with the Agile methodologies and using Jira for managing sprints and issue tickets efficiently.",
+      technologies: [
+        "iOS",
+        "UIKit",
+        "Objective-C",
+        "SwiftUI",
+        "Ruby",
+        "XCFramework",
+        "CI/CD",
+        "Gitlab",
+        "Jira",
+        "Confluence",
+        "Google Repo",
+      ],
+    },
+  },
+  {
+    company: {
+      name: "SQLI",
+      profileHeadline: "Mobile App Developer",
+      startDate: new Date(2022, 2, 15),
+      endDate: new Date(2023, 6, 11),
+      contractType: "CDI",
+      location: "Morocco",
+      locationType: "Hybrid",
+      employmentType: "full-time",
+      description:
+        "I collaborated with a team to develop a new e-commerce app for iOS and Android using Agile Scrum methodology. Through iterative development and constant communication, we ensured a seamless user experience. Our approach facilitated rapid adaptation to evolving requirements, delivering a robust, market-ready solution.",
+      technologies: [
+        "iOS",
+        "Android",
+        "React Native",
+        "CI/CD",
+        "Rest API",
+        "Jira",
+        "Confluence",
+        "Gitlab",
+        "Fastlane",
+        "Postman",
+      ],
+    },
+  },
 ];
 
-
+const projects: ProjectType[] = [
+  {
+    project: {
+      title: "iOS Application",
+      name: "GetInfo",
+      isReady: false,
+      description: "iOS application help user to get all information about the device, hardware and software.",
+      technologies: ["iOS", "SwiftUI", "AppStore", "Swift"],
+    },
+  },
+  {
+    project: {
+      title: "Android Application",
+      name: "GetInfo",
+      isReady: false,
+      description: "iOS application help user to get all information about the device, hardware and software.",
+      technologies: ["Android", "Kotlin", "Google Play", "Jetpack Compose"],
+    },
+  },
+  {
+    project: {
+      title: "React Native Library",
+      name: "Zendesk SDK RN",
+      description: "it's a React Native library developed on iOS and Android and made a bridge between the native and the JS.",
+      repositoryLink: "https://github.com/ennbou/zendesk-mobile-sdk-rn",
+      technologies: ["React Native", "TS", "Objective-c", "Swift", "Java"],
+    },
+  },
+  {
+    project: {
+      title: "J2EE spring Boot & Thymeleaf",
+      name: "MEDAPP",
+      description: "Realization of a web project for the management of a medical office.",
+      repositoryLink: "https://github.com/ennbou/medapp",
+      technologies: ["MVC", "Thymeleaf", "Spring Security", "Spring Boot"],
+    },
+  },
+  {
+    project: {
+      title: "Android Native",
+      name: "Contacts App",
+      description: "Realization of a mobile application to manage the contacts.",
+      repositoryLink: "https://github.com/ennbou/Contacts",
+      technologies: ["JAVA", "MVVM", "SQLite (ROOM)", "MotionLayout"],
+    },
+  },
+  {
+    project: {
+      title: "Android Native",
+      name: "Weather API",
+      description: "Realization of an Android mobile application that consumes the OpenWeatherMap API.",
+      repositoryLink: "https://github.com/ennbou/Weather",
+      technologies: ["JAVA", "API", "Picasso", "Android"],
+    },
+  },
+];
 ---
 
 <Layout title="ENNBOU">
-	<main>
-	<Header />
-	<AboutMe />
-	<div class="grid lg:grid-cols-2 gap-x-3 gap-y-6 p-8 lg:p-16">
-	{companies.map(({company}) => (
-		<div><Company {company}/></div>
-	))}
-	</div>
-	</main>
+  <main>
+    <Header />
+    <AboutMe />
+    <SectionTitle title="Companies" />
+    <div class="grid lg:grid-cols-2 gap-x-3 gap-y-6 p-8 lg:p-16">
+      {
+        companies.map(({ company }) => (
+          <div>
+            <Company {company} />
+          </div>
+        ))
+      }
+    </div>
+    <SectionTitle title="Projects" />
+    <div class="grid grid-cols-3 gap-4 p-8">
+      {
+        projects.map(({ project }) => (
+          <div>
+            <Project {project} />
+          </div>
+        ))
+      }
+    </div>
+  </main>
 </Layout>
