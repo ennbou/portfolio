@@ -32,8 +32,8 @@ const companies: CompanyType[]= [
     locationType: "Hybrid",
     employmentType: "full-time",
     description:
-      "I was working with a team for developing a new e-commerce Application on both platform iOS and Android using Agile Scrum methodology.",
-		technologies: ["iOS", "Android", "React Native", "CI/CD", "Rest API", "Jira", "Confluence", "Gitlab"]
+      "I collaborated with a team to develop a new e-commerce app for iOS and Android using Agile Scrum methodology. Through iterative development and constant communication, we ensured a seamless user experience. Our approach facilitated rapid adaptation to evolving requirements, delivering a robust, market-ready solution.",
+		technologies: ["iOS", "Android", "React Native", "CI/CD", "Rest API", "Jira", "Confluence", "Gitlab", "Fastlane", "Postman"]
   }},
 ];
 
@@ -44,7 +44,7 @@ const companies: CompanyType[]= [
 	<main>
 	<Header />
 	<AboutMe />
-	<div class="grid lg:grid-cols-2 gap-x-3 gap-y-6">
+	<div class="grid lg:grid-cols-2 gap-x-3 gap-y-6 p-8 lg:p-16">
 	{companies.map(({company}) => (
 		<div><Company {company}/></div>
 	))}
