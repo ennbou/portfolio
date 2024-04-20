@@ -5,11 +5,49 @@ import '@fontsource/roboto';
 import Layout from '@layouts/Layout.astro';
 import Header from '@components/Header.astro';
 import AboutMe from '@components/AboutMe.astro';
+import Company from '@components/Company.astro';
+import type {Props as CompanyType} from '@components/Company.astro';
+
+const companies: CompanyType[]= [
+  {company:{
+    name: "Alpha Network",
+    profileHeadline: "iOS Developer",
+    startDate: new Date(2023,6,12),
+    endDate: undefined,
+    contractType: "CDI",
+    location: "Morocco",
+    locationType: "Hybrid",
+    employmentType: "full-time",
+    description:
+      "As a member of a mobile development team, I contribute to developing an iOS and Android online streaming applications (live/VOD) for diverse clients spanning various countries. We are working with the Agile methodologies and using Jira for managing sprints and issue tickets efficiently.",
+			technologies: ["iOS", "UIKit", "Objective-C", "SwiftUI", "Ruby","XCFramework", "CI/CD", "Gitlab", "Jira", "Confluence", "Google Repo"]
+  }},
+  {company:{
+    name: "SQLI",
+    profileHeadline: "Mobile App Developer",
+    startDate: new Date(2022,2,15),
+    endDate: new Date(2023,6,11),
+    contractType: "CDI",
+    location: "Morocco",
+    locationType: "Hybrid",
+    employmentType: "full-time",
+    description:
+      "I was working with a team for developing a new e-commerce Application on both platform iOS and Android using Agile Scrum methodology.",
+		technologies: ["iOS", "Android", "React Native", "CI/CD", "Rest API", "Jira", "Confluence", "Gitlab"]
+  }},
+];
+
+
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
 	<Header />
-	<AboutMe />	
+	<AboutMe />
+	<div class="grid lg:grid-cols-2 gap-x-3 gap-y-6">
+	{companies.map(({company}) => (
+		<div><Company {company}/></div>
+	))}
+	</div>
 	</main>
 </Layout>
