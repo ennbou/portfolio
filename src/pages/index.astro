@@ -130,22 +130,18 @@ const projects: ProjectType[] = [
     <Header />
     <AboutMe />
     <SectionTitle title="Companies" />
-    <div class="grid lg:grid-cols-2 gap-x-3 gap-y-6 p-8 lg:p-16">
+    <div class="grid lg:grid-cols-2 gap-x-3 gap-y-6 p-4 lg:p-16 lg:pt-8 mb-12">
       {
         companies.map(({ company }) => (
-          <div>
             <Company {company} />
-          </div>
         ))
       }
     </div>
-    <SectionTitle title="Projects" />
+    <SectionTitle title="Projects"/>
     <div class="grid lg:grid-cols-2 2xl:grid-cols-3 gap-4 p-8">
       {
         projects.map(({ project }) => (
-          <div>
             <Project {project} />
-          </div>
         ))
       }
     </div>
