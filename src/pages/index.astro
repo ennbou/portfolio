@@ -2,6 +2,8 @@
 import "@fontsource-variable/merienda";
 import "@fontsource/roboto";
 
+import {  images } from '@images/index.astro';
+
 import Layout from "@layouts/Layout.astro";
 import Header from "@components/Header.astro";
 import AboutMe from "@components/AboutMe.astro";
@@ -15,6 +17,7 @@ const companies: CompanyType[] = [
   {
     company: {
       name: "Alpha Network",
+      image: images.anLogo,
       profileHeadline: "iOS Developer",
       startDate: new Date(2023, 6, 12),
       endDate: undefined,
@@ -42,6 +45,7 @@ const companies: CompanyType[] = [
   {
     company: {
       name: "SQLI",
+      image: images.sqliLogo,
       profileHeadline: "Mobile App Developer",
       startDate: new Date(2022, 2, 15),
       endDate: new Date(2023, 6, 11),
@@ -129,7 +133,7 @@ const projects: ProjectType[] = [
   <main>
     <Header />
     <AboutMe />
-    <SectionTitle title="Companies" />
+    <SectionTitle title="Experiences" />
     <div class="grid lg:grid-cols-2 gap-x-3 gap-y-6 p-4 lg:p-16 lg:pt-8 mb-12">
       {
         companies.map(({ company }) => (
