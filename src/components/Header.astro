@@ -1,11 +1,22 @@
 ---
-import { Image } from 'astro:assets';
-import setupImage from '@images/setupImage.png';
+import { Image } from "astro:assets";
+import setupImage from "@images/setupImage.png";
 ---
 
 <div class="flex justify-center flex-col items-center h-full p-8 pb-0">
-  <div class="text-4xl lg:text-6xl text-purple-600 pt-12 font-merienda text-center">Mobile App Developer</div>
-  <div class="text-xl lg:text-2xl text-gray-500 pb-8 pt-2 text-center">iOS and Android developement, and also React Native</div>
-  <Image src={setupImage} alt="setup image" class="max-w-full max-h-full w-full lg:w-8/12"/>
+  <div
+    class="text-4xl lg:text-6xl text-purple-600 pt-12 font-merienda text-center"
+  >
+    Mobile App Developer
+  </div>
+  <div class="text-xl lg:text-2xl text-gray-500 pb-8 pt-2 text-center">
+    iOS and Android developement, and also React Native
+  </div>
+  <Image
+    src={setupImage}
+    alt="setup image"
+    widths={[240, 540, 720, setupImage.width]}
+    sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${setupImage.width}px`}
+    class="max-w-full max-h-full w-full lg:w-8/12"
+  />
 </div>
-

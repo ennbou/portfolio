@@ -4,7 +4,7 @@ import "@fontsource/roboto";
 
 import {  images } from '@images/index.astro';
 
-import Layout from "@layouts/Layout.astro";
+import Home from "@layouts/Home.astro";
 import Header from "@components/Header.astro";
 import AboutMe from "@components/AboutMe.astro";
 import Company from "@components/Company.astro";
@@ -129,7 +129,7 @@ const projects: ProjectType[] = [
 ];
 ---
 
-<Layout title="ENNBOU">
+<Home title="ENNBOU">
   <main>
     <Header />
     <AboutMe />
@@ -150,4 +150,4 @@ const projects: ProjectType[] = [
       }
     </div>
   </main>
-</Layout>
+</Home>
