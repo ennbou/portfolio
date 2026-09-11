@@ -1,4 +1,4 @@
-# Bouchaib ENNAKR — Portfolio
+# Bouchaib — Portfolio
 
 Personal portfolio built with Astro 7 and Tailwind CSS 4, deployed as a static site on Cloudflare Pages.
 
