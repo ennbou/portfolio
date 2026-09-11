@@ -7,8 +7,8 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "pages:preview": "npm run build && wrangler pages dev",
-    "pages:deploy": "npm run build && wrangler pages deploy",
+    "cf:preview": "npm run build && wrangler dev",
+    "cf:deploy": "npm run build && wrangler deploy",
     "astro": "astro"
   },
   "engines": {
