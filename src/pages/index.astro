@@ -1,0 +1,320 @@
+---
+import { Image } from "astro:assets";
+import avatar from "@images/avatardev.jpg";
+import Home from "@layouts/Home.astro";
+
+const experience = [
+  {
+    dates: "Feb 2025 — Present",
+    role: "iOS Developer",
+    company: "Capgemini · Renault",
+    context: "Large-scale automotive mobile product · SAFe",
+    summary:
+      "Building and maintaining iOS features with Swift, UIKit, and SwiftUI inside a large, cross-functional mobile organization.",
+    outcomes: [
+      "Deliver clean, tested features and integrate third-party SDKs across an established iOS codebase.",
+      "Use Crashlytics, Analytics, and Remote Config to improve stability, product insight, and controlled releases.",
+      "Review code, partner with design and QA, and contribute to CI/CD and delivery improvements.",
+    ],
+    stack: ["Swift", "UIKit", "SwiftUI", "Firebase", "CI/CD", "SAFe"],
+    current: true,
+  },
+  {
+    dates: "Dec 2023 — Feb 2025",
+    role: "iOS Developer",
+    company: "Alpha Networks",
+    context: "International video SaaS platform · Agile/Scrum",
+    summary:
+      "Developed a multi-client streaming product delivered across iPhone, iPad, TV, Android, and web platforms.",
+    outcomes: [
+      "Built and maintained iOS experiences in Swift and UIKit for live and on-demand video products.",
+      "Worked in two-week sprints with mobile, web, QA, product, and design teams.",
+      "Supported automated build and store delivery pipelines with GitLab CI and runners.",
+    ],
+    stack: ["Swift", "UIKit", "Xcode", "GitLab CI", "REST APIs", "Scrum"],
+  },
+  {
+    dates: "Feb 2021 — Jun 2023",
+    role: "Mobile Developer",
+    company: "SQLI Digital Experience",
+    context: "Marjane Mall and internal workplace products",
+    summary:
+      "Shipped e-commerce and workplace applications across iOS and Android, combining React Native delivery with native integrations.",
+    outcomes: [
+      "Developed React Native features and native Swift/Kotlin bridges for production mobile apps.",
+      "Automated QA and store releases with Fastlane, GitLab CI, TestFlight, and App Center.",
+      "Integrated Firebase, Microsoft Graph, Azure AD, Core Data, Room, and automated tests.",
+    ],
+    stack: ["React Native", "Swift", "Kotlin", "Fastlane", "Firebase", "Testing"],
+  },
+];
+
+const capabilities = [
+  {
+    index: "01",
+    title: "Native iOS",
+    description: "Product-minded development across mature UIKit codebases and modern SwiftUI features.",
+    items: ["Swift", "UIKit", "SwiftUI", "Core Data", "Xcode / LLDB"],
+  },
+  {
+    index: "02",
+    title: "Quality & delivery",
+    description: "Reliable releases through automated testing, code review, observability, and delivery pipelines.",
+    items: ["Automated tests", "Fastlane", "GitLab CI", "Crashlytics", "App Store delivery"],
+  },
+  {
+    index: "03",
+    title: "Cross-platform",
+    description: "Native depth when React Native products need platform APIs, SDK bridges, or performance work.",
+    items: ["React Native", "TypeScript", "Kotlin", "Java", "Objective-C"],
+  },
+  {
+    index: "04",
+    title: "APIs & teamwork",
+    description: "Clear technical collaboration from API validation and network inspection through Agile delivery.",
+    items: ["REST APIs", "Postman", "WePROXA", "Jira", "Confluence"],
+  },
+];
+
+const work = [
+  {
+    label: "Open source",
+    title: "Zendesk Mobile SDK for React Native",
+    description:
+      "A custom cross-platform bridge that brings native Zendesk functionality to React Native applications across iOS and Android.",
+    meta: "Swift · Objective-C · Kotlin · Java · TypeScript",
+    href: "https://github.com/ennbou/zendesk-mobile-sdk-rn",
+  },
+  {
+    label: "Commerce",
+    title: "Marjane Mall mobile apps",
+    description:
+      "Production e-commerce experiences for iOS and Android, delivered with React Native, Firebase, native integrations, and automated releases.",
+    meta: "React Native · Firebase · Fastlane · GitLab CI",
+  },
+  {
+    label: "Streaming",
+    title: "Multi-client video platforms",
+    description:
+      "Live and VOD experiences built for an international portfolio of branded mobile products and multiple device families.",
+    meta: "iOS · UIKit · REST APIs · CI/CD",
+  },
+];
+
+const education = [
+  {
+    year: "2018 — 2021",
+    degree: "State Engineer in Software Engineering & Distributed Computing",
+    school: "ENSET Mohammedia",
+  },
+  {
+    year: "2017 — 2018",
+    degree: "Professional Bachelor in Mobile Application Engineering",
+    school: "École Supérieure de Technologie, Salé",
+  },
+  {
+    year: "2015 — 2017",
+    degree: "DUT in Software Development",
+    school: "École Supérieure de Technologie, Oujda",
+  },
+];
+---
+
+<Home
+  title="Bouchaib ENNAKR — Senior iOS Developer"
+  description="Senior iOS developer in Casablanca building reliable mobile products with Swift, UIKit, SwiftUI, React Native, and modern delivery practices."
+>
+  <header class="site-header">
+    <div class="shell nav-shell">
+      <a class="brand" href="#top" aria-label="Bouchaib ENNAKR, back to top">
+        <span class="brand-mark" aria-hidden="true">BE</span>
+        <span class="brand-name">Bouchaib ENNAKR</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#experience">Experience</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="nav-cta" href="mailto:contanct@ennbou.com">Let’s talk</a>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero shell" id="top">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> Senior iOS Developer · Casablanca</p>
+        <h1>I build mobile products that stay <em>fast, stable,</em> and easy to evolve.</h1>
+        <p class="hero-intro">
+          I’m Bouchaib, an iOS specialist working across Swift, UIKit, and SwiftUI. I turn complex product requirements into dependable experiences—and help teams ship them with confidence.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="mailto:contanct@ennbou.com">
+            Start a conversation
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"></path></svg>
+          </a>
+          <a class="button button-secondary" href="https://www.linkedin.com/in/ennbou/" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+        <dl class="hero-facts" aria-label="Career highlights">
+          <div><dt>5+</dt><dd>years in mobile</dd></div>
+          <div><dt>3</dt><dd>mobile platforms</dd></div>
+          <div><dt>End-to-end</dt><dd>build to release</dd></div>
+        </dl>
+      </div>
+
+      <aside class="profile-panel" aria-label="Developer profile">
+        <div class="profile-grid" aria-hidden="true"></div>
+        <div class="profile-topline">
+          <span>Profile / 2026</span>
+          <span class="status"><i></i> Building now</span>
+        </div>
+        <div class="portrait-frame">
+          <Image src={avatar} alt="Illustrated portrait of Bouchaib ENNAKR" width={338} height={338} loading="eager" />
+          <span class="portrait-tag">iOS</span>
+        </div>
+        <div class="profile-bottom">
+          <p>Current focus</p>
+          <strong>Scalable iOS features & release quality</strong>
+          <div class="signal-row" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="marquee" aria-label="Core technologies">
+      <div>
+        <span>Swift</span><i>✦</i><span>SwiftUI</span><i>✦</i><span>UIKit</span><i>✦</i><span>React Native</span><i>✦</i><span>CI/CD</span><i>✦</i><span>Firebase</span>
+      </div>
+    </section>
+
+    <section class="section shell" id="experience">
+      <div class="section-heading">
+        <p class="section-kicker">01 / Experience</p>
+        <h2>Shipping products with teams that care about the details.</h2>
+        <p>From feature discovery to store delivery, I contribute across the full mobile development lifecycle.</p>
+      </div>
+
+      <div class="timeline">
+        {experience.map((item) => (
+          <article class="experience-item">
+            <div class="timeline-meta">
+              <span class:list={["timeline-dot", { current: item.current }]}></span>
+              <p>{item.dates}</p>
+            </div>
+            <div class="experience-main">
+              <div class="experience-title">
+                <div>
+                  <h3>{item.role}</h3>
+                  <p>{item.company}</p>
+                </div>
+                <span>{item.context}</span>
+              </div>
+              <p class="experience-summary">{item.summary}</p>
+              <ul>
+                {item.outcomes.map((outcome) => <li>{outcome}</li>)}
+              </ul>
+              <div class="tag-list" aria-label={`${item.company} technologies`}>
+                {item.stack.map((technology) => <span>{technology}</span>)}
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="section capabilities-section" id="expertise">
+      <div class="shell">
+        <div class="section-heading split-heading">
+          <div>
+            <p class="section-kicker">02 / Expertise</p>
+            <h2>Native depth. Wider product perspective.</h2>
+          </div>
+          <p>I specialize in iOS without losing sight of the APIs, platforms, and people around it.</p>
+        </div>
+        <div class="capability-grid">
+          {capabilities.map((capability) => (
+            <article class="capability-card">
+              <span class="capability-index">{capability.index}</span>
+              <h3>{capability.title}</h3>
+              <p>{capability.description}</p>
+              <ul>
+                {capability.items.map((item) => <li>{item}</li>)}
+              </ul>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell" id="work">
+      <div class="section-heading split-heading">
+        <div>
+          <p class="section-kicker">03 / Selected work</p>
+          <h2>Mobile work built for real users.</h2>
+        </div>
+        <p>A selection spanning open-source SDKs, commerce, and international streaming products.</p>
+      </div>
+      <div class="work-grid">
+        {work.map((item, index) => (
+          <article class:list={["work-card", { featured: index === 0 }]}>
+            <div class="work-card-top">
+              <span>{item.label}</span>
+              <span aria-hidden="true">0{index + 1}</span>
+            </div>
+            <div>
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+            </div>
+            <div class="work-card-footer">
+              <span>{item.meta}</span>
+              {item.href && (
+                <a href={item.href} target="_blank" rel="noreferrer" aria-label={`View ${item.title} on GitHub`}>
+                  View source <span aria-hidden="true">↗</span>
+                </a>
+              )}
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="section shell education-section" id="education">
+      <div class="section-heading">
+        <p class="section-kicker">04 / Education</p>
+        <h2>Software engineering, built from the fundamentals up.</h2>
+      </div>
+      <div class="education-list">
+        {education.map((item) => (
+          <article>
+            <span>{item.year}</span>
+            <h3>{item.degree}</h3>
+            <p>{item.school} · Morocco</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="shell contact-grid">
+        <div>
+          <p class="section-kicker">05 / Contact</p>
+          <h2>Have a mobile challenge worth solving?</h2>
+        </div>
+        <div class="contact-copy">
+          <p>I’m always glad to talk about iOS architecture, product delivery, and thoughtful mobile experiences.</p>
+          <a href="mailto:contanct@ennbou.com">contanct@ennbou.com <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell footer-grid">
+      <p>© {new Date().getFullYear()} Bouchaib ENNAKR</p>
+      <p>Casablanca, Morocco · English & French</p>
+      <div>
+        <a href="https://github.com/ENNBOU" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/ennbou/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href="#top">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+</Home>
