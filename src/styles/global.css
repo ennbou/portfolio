@@ -391,6 +391,59 @@ a:focus-visible { outline: 2px solid var(--blue); outline-offset: 4px; }
 }
 .capability-card li::before { margin-right: 8px; color: var(--green); content: "+"; }
 
+.ai-layout { display: grid; grid-template-columns: 1.3fr 0.7fr; gap: 18px; align-items: start; }
+
+.ai-practice {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--line-strong);
+  list-style: none;
+  counter-reset: none;
+}
+
+.ai-practice li {
+  display: grid;
+  grid-template-columns: 76px 1fr;
+  gap: 24px;
+  padding: 30px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.ai-index { color: var(--violet); font-family: var(--font-mono); font-size: 0.76rem; }
+.ai-practice h3 { margin: 0; font-size: 1.35rem; line-height: 1.3; letter-spacing: -0.03em; }
+.ai-practice p { max-width: 620px; margin: 14px 0 0; color: var(--muted); }
+
+.ai-toolkit {
+  padding: 26px;
+  border: 1px solid var(--line-strong);
+  background: linear-gradient(155deg, rgba(140, 124, 255, 0.12), rgba(16, 21, 31, 0.92) 45%);
+}
+
+.ai-toolkit-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.ai-toolkit ul {
+  display: grid;
+  margin: 24px 0 0;
+  padding: 0;
+  border-top: 1px solid var(--line);
+  list-style: none;
+}
+
+.ai-toolkit li { padding: 16px 0; border-bottom: 1px solid var(--line); }
+.ai-toolkit li strong { display: block; font-size: 1.02rem; font-weight: 700; letter-spacing: -0.02em; }
+.ai-toolkit li span { display: block; margin-top: 3px; color: var(--faint); font-family: var(--font-mono); font-size: 0.72rem; line-height: 1.5; }
+.ai-toolkit-note { margin: 22px 0 0; color: var(--muted); font-size: 0.9rem; }
+
 .work-grid { display: grid; grid-template-columns: 1.25fr 0.75fr; gap: 18px; }
 .work-card {
   display: flex;
@@ -440,6 +493,7 @@ footer { border-top: 1px solid var(--line); background: #07090e; }
   .capability-grid { grid-template-columns: repeat(2, 1fr); }
   .capability-card { min-height: 370px; }
   .education-section { gap: 48px; }
+  .ai-layout { grid-template-columns: 1fr; gap: 40px; }
 }
 
 @media (max-width: 800px) {
@@ -454,6 +508,7 @@ footer { border-top: 1px solid var(--line); background: #07090e; }
   .split-heading > p { margin-top: 0; }
   .experience-item { grid-template-columns: 1fr; gap: 30px; }
   .work-grid { grid-template-columns: 1fr; }
+  .ai-toolkit { width: min(100%, 480px); }
   .work-card.featured { grid-row: auto; min-height: 510px; }
   .footer-grid { grid-template-columns: 1fr; gap: 8px; padding-block: 28px; }
   .footer-grid > div { justify-content: flex-start; margin-top: 10px; }
@@ -481,6 +536,7 @@ footer { border-top: 1px solid var(--line); background: #07090e; }
   .capability-grid { grid-template-columns: 1fr; }
   .capability-card { min-height: 0; }
   .capability-index { margin-bottom: 56px; }
+  .ai-practice li { grid-template-columns: 1fr; gap: 10px; }
   .capability-card > p { min-height: 0; }
   .work-card, .work-card.featured { min-height: 430px; }
   .work-card.featured h3 { font-size: 2.55rem; }

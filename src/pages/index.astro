@@ -76,6 +76,40 @@ const capabilities = [
   },
 ];
 
+const aiPractice = [
+  {
+    index: "01",
+    title: "AI in the daily loop",
+    description:
+      "I work with AI agents every day—scaffolding features, refactoring, writing tests, reading unfamiliar code, and reviewing my own diffs before anyone else has to.",
+  },
+  {
+    index: "02",
+    title: "Instructions, skills & agents",
+    description:
+      "I write the AGENTS.md, CLAUDE.md, skill, and sub-agent files that give an assistant real project context, house rules, and repeatable workflows instead of generic answers.",
+  },
+  {
+    index: "03",
+    title: "MCP in practice",
+    description:
+      "I connect assistants to the tools that matter through MCP—repositories, API traffic, issue trackers, and local services—so answers come from real project data, not guesses.",
+  },
+  {
+    index: "04",
+    title: "Custom MCP servers",
+    description:
+      "When no existing server fits, I build one: a small, typed server exposing exactly the tools and resources a team needs, with safe defaults and clear boundaries.",
+  },
+];
+
+const aiTools = [
+  { name: "Claude Code", note: "Agentic sessions, skills, custom agents" },
+  { name: "GitHub Copilot", note: "In-editor completion and chat" },
+  { name: "Codex", note: "Task-scoped delegation and reviews" },
+  { name: "MCP", note: "Server integration and authoring" },
+];
+
 const work = [
   {
     label: "Open source",
@@ -132,6 +166,7 @@ const education = [
       </a>
       <nav aria-label="Primary navigation">
         <a href="#experience">Experience</a>
+        <a href="#ai">AI</a>
         <a href="#work">Work</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -244,10 +279,52 @@ const education = [
       </div>
     </section>
 
+    <section class="section shell ai-section" id="ai">
+      <div class="section-heading split-heading">
+        <div>
+          <p class="section-kicker">03 / AI engineering</p>
+          <h2>AI is part of how I build, not a demo.</h2>
+        </div>
+        <p>I use coding agents daily, and I build the instruction files and MCP servers that make them reliable teammates.</p>
+      </div>
+
+      <div class="ai-layout">
+        <ol class="ai-practice">
+          {aiPractice.map((item) => (
+            <li>
+              <span class="ai-index">{item.index}</span>
+              <div>
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
+
+        <aside class="ai-toolkit" aria-label="AI toolkit">
+          <div class="ai-toolkit-top">
+            <span>Daily toolkit</span>
+            <span class="status"><i></i> In use</span>
+          </div>
+          <ul>
+            {aiTools.map((tool) => (
+              <li>
+                <strong>{tool.name}</strong>
+                <span>{tool.note}</span>
+              </li>
+            ))}
+          </ul>
+          <p class="ai-toolkit-note">
+            Same principle every time: give the model precise context, keep it inside clear boundaries, and review every line before it ships.
+          </p>
+        </aside>
+      </div>
+    </section>
+
     <section class="section shell" id="work">
       <div class="section-heading split-heading">
         <div>
-          <p class="section-kicker">03 / Selected work</p>
+          <p class="section-kicker">04 / Selected work</p>
           <h2>Mobile work built for real users.</h2>
         </div>
         <p>A selection spanning open-source SDKs, commerce, and international streaming products.</p>
@@ -278,7 +355,7 @@ const education = [
 
     <section class="section shell education-section" id="education">
       <div class="section-heading">
-        <p class="section-kicker">04 / Education</p>
+        <p class="section-kicker">05 / Education</p>
         <h2>Software engineering, built from the fundamentals up.</h2>
       </div>
       <div class="education-list">
@@ -295,7 +372,7 @@ const education = [
     <section class="contact-section" id="contact">
       <div class="shell contact-grid">
         <div>
-          <p class="section-kicker">05 / Contact</p>
+          <p class="section-kicker">06 / Contact</p>
           <h2>Have a mobile challenge worth solving?</h2>
         </div>
         <div class="contact-copy">
